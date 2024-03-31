@@ -41,6 +41,7 @@
 		572A99032BB6468A007D9C44 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		572A99052BB6470F007D9C44 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		5741283A2BB9E22800D29854 /* CardStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStorage.swift; sourceTree = "<group>"; };
+		5741283C2BB9E61C00D29854 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		57ACE9822BB3B38F003553EE /* Freshzilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Freshzilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57ACE9852BB3B38F003553EE /* FreshzillaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshzillaApp.swift; sourceTree = "<group>"; };
 		57ACE9872BB3B38F003553EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +84,7 @@
 		57ACE9792BB3B38F003553EE = {
 			isa = PBXGroup;
 			children = (
+				5741283C2BB9E61C00D29854 /* README.md */,
 				57ACE9842BB3B38F003553EE /* Freshzilla */,
 				57ACE9962BB3B390003553EE /* FreshzillaTests */,
 				57ACE9A02BB3B390003553EE /* FreshzillaUITests */,
