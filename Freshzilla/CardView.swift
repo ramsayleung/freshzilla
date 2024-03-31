@@ -6,6 +6,17 @@
 //
 
 import SwiftUI
+extension RoundedRectangle {
+    func fillByOffset(for width: CGFloat)  -> some View {
+        if width == 0 {
+            return self.fill(.white)
+        } else if width > 0 {
+            return self.fill(.green)
+        } else {
+            return self.fill(.red)
+        }
+    }
+}
 
 struct CardView: View {
     @Environment(\.accessibilityDifferentiateWithoutColor) var accessibilityDifferentiateWithoutColor
@@ -25,7 +36,7 @@ struct CardView: View {
                 .background(
                     accessibilityDifferentiateWithoutColor ? nil :
                     RoundedRectangle(cornerRadius: 25)
-                        .fill(offset.width > 0 ? .green : .red)
+                        .fillByOffset(for: offset.width)
                 )
                 .shadow(radius: 10)
             
