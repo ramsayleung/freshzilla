@@ -16,6 +16,7 @@
 		57ACE9982BB3B390003553EE /* FreshzillaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ACE9972BB3B390003553EE /* FreshzillaTests.swift */; };
 		57ACE9A22BB3B390003553EE /* FreshzillaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ACE9A12BB3B390003553EE /* FreshzillaUITests.swift */; };
 		57ACE9A42BB3B390003553EE /* FreshzillaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ACE9A32BB3B390003553EE /* FreshzillaUITestsLaunchTests.swift */; };
+		57E0F8B62BB91595002E49E4 /* EditCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E0F8B52BB91595002E49E4 /* EditCardsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		57ACE99D2BB3B390003553EE /* FreshzillaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreshzillaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57ACE9A12BB3B390003553EE /* FreshzillaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshzillaUITests.swift; sourceTree = "<group>"; };
 		57ACE9A32BB3B390003553EE /* FreshzillaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshzillaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		57E0F8B52BB91595002E49E4 /* EditCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCardsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				57ACE9852BB3B38F003553EE /* FreshzillaApp.swift */,
 				57ACE9872BB3B38F003553EE /* ContentView.swift */,
 				572A99032BB6468A007D9C44 /* Card.swift */,
+				57E0F8B52BB91595002E49E4 /* EditCardsView.swift */,
 				572A99052BB6470F007D9C44 /* CardView.swift */,
 				57ACE9892BB3B390003553EE /* Assets.xcassets */,
 				57ACE98B2BB3B390003553EE /* Freshzilla.entitlements */,
@@ -268,6 +271,7 @@
 				572A99062BB6470F007D9C44 /* CardView.swift in Sources */,
 				57ACE9882BB3B38F003553EE /* ContentView.swift in Sources */,
 				572A99042BB6468A007D9C44 /* Card.swift in Sources */,
+				57E0F8B62BB91595002E49E4 /* EditCardsView.swift in Sources */,
 				57ACE9862BB3B38F003553EE /* FreshzillaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
