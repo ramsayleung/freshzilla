@@ -48,17 +48,11 @@ struct EditCardsView: View {
     }
     
     func loadData() {
-        if let data = UserDefaults.standard.data(forKey: "Cards") {
-            if let decoded = try? JSONDecoder().decode([Card].self, from: data){
-                cards = decoded
-            }
-        }
+        cards = CardStorage.loadData()
     }
     
     func saveData() {
-        if let data = try? JSONEncoder().encode(cards) {
-            UserDefaults.standard.set(data, forKey: "Cards")
-        }
+        CardStorage.saveData(cards: cards)
     }
     
     func addCard() {
@@ -69,6 +63,9 @@ struct EditCardsView: View {
         let card = Card(prompt: trimmedPrompt, answer: trimmedAnswer)
         cards.insert(card, at: 0)
         saveData()
+        
+        newAnswer = ""
+        newPrompt = ""
     }
     
     func removeCards(at offsets: IndexSet) {
