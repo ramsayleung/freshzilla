@@ -22,6 +22,7 @@ struct ContentView: View {
     @State private var isActive = false
     @State private var cards = [Card]()
     @State private var timeRemaining = 100
+    
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
@@ -41,16 +42,16 @@ struct ContentView: View {
                     .clipShape(Capsule())
                 
                 ZStack {
-                    ForEach(0..<cards.count, id: \.self){ index in
-                        CardView(card: cards[index]) {
+                    ForEach(cards) { card in
+                        CardView(card: card) {isCorrect in
                             withAnimation {
-                                removeCard(at: index)
+                                removeCard(isCorrectAnswer: isCorrect, at: findIndexById(id: card.id))
                             }
                         }
-                        .stacked(at: index, in: cards.count)
+                        .stacked(at: findIndexById(id: card.id), in: cards.count)
                         // only allow to drag the top card
-                        .allowsHitTesting(index == cards.count - 1)
-                        .accessibilityHidden(index < cards.count - 1)
+                        .allowsHitTesting(findIndexById(id: card.id) == cards.count - 1)
+                        .accessibilityHidden(findIndexById(id: card.id) < cards.count - 1)
                     }
                 }
                 .allowsHitTesting(timeRemaining > 0)
@@ -88,7 +89,7 @@ struct ContentView: View {
                     HStack {
                         Button {
                             withAnimation {
-                                removeCard(at: cards.count - 1)
+                                removeCard(isCorrectAnswer: false, at: cards.count - 1)
                             }
                         } label: {
                             Image(systemName: "xmark.circle")
@@ -103,7 +104,7 @@ struct ContentView: View {
                         
                         Button {
                             withAnimation {
-                                removeCard(at: cards.count - 1)
+                                removeCard(isCorrectAnswer: true, at: cards.count - 1)
                             }
                         } label: {
                             Image(systemName: "checkmark.circle")
@@ -137,21 +138,34 @@ struct ContentView: View {
         }.onAppear(perform: resetCard)
     }
     
-    func removeCard(at index: Int){
+    // O(N) time complexity
+    func findIndexById(id target: UUID) -> Int {
+        if let index = cards.firstIndex(where: { $0.id == target }) {
+            return index
+        } else {
+            return -1
+        }
+    }
+    
+    func removeCard(isCorrectAnswer: Bool, at index: Int){
         guard index >= 0 else { return }
         
+        var removedCard = cards[index]
         cards.remove(at: index)
+        removedCard.id = UUID()
+        
+        if !isCorrectAnswer {
+            cards.insert(removedCard, at: 0)
+            print("insert incorrect card back into cards: \(cards)")
+        }
+        
         if cards.isEmpty {
             isActive = false
         }
     }
     
     func loadData() {
-        if let data = UserDefaults.standard.data(forKey: "Cards"){
-            if let decoded = try? JSONDecoder().decode([Card].self, from: data){
-                cards = decoded
-            }
-        }
+        cards = CardStorage.loadData()
     }
     
     func resetCard(){

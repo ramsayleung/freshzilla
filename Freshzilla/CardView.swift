@@ -26,7 +26,7 @@ struct CardView: View {
     @State private var offset = CGSize.zero
     
     let card: Card
-    var removal: (() -> Void)? = nil
+    var removal: ((Bool) -> Void)? = nil
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 25)
@@ -72,7 +72,8 @@ struct CardView: View {
             .onEnded { _ in
                 if abs(offset.width) > 100 {
                     // remove the card
-                    removal?()
+                    let isCorrect = offset.width > 0
+                    removal?(isCorrect)
                 } else{
                     offset = .zero
                 }

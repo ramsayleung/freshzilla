@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		572A99042BB6468A007D9C44 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572A99032BB6468A007D9C44 /* Card.swift */; };
 		572A99062BB6470F007D9C44 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572A99052BB6470F007D9C44 /* CardView.swift */; };
+		5741283B2BB9E22800D29854 /* CardStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5741283A2BB9E22800D29854 /* CardStorage.swift */; };
 		57ACE9862BB3B38F003553EE /* FreshzillaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ACE9852BB3B38F003553EE /* FreshzillaApp.swift */; };
 		57ACE9882BB3B38F003553EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ACE9872BB3B38F003553EE /* ContentView.swift */; };
 		57ACE98A2BB3B390003553EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57ACE9892BB3B390003553EE /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		572A99032BB6468A007D9C44 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		572A99052BB6470F007D9C44 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		5741283A2BB9E22800D29854 /* CardStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStorage.swift; sourceTree = "<group>"; };
 		57ACE9822BB3B38F003553EE /* Freshzilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Freshzilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57ACE9852BB3B38F003553EE /* FreshzillaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshzillaApp.swift; sourceTree = "<group>"; };
 		57ACE9872BB3B38F003553EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				57ACE9872BB3B38F003553EE /* ContentView.swift */,
 				572A99032BB6468A007D9C44 /* Card.swift */,
 				57E0F8B52BB91595002E49E4 /* EditCardsView.swift */,
+				5741283A2BB9E22800D29854 /* CardStorage.swift */,
 				572A99052BB6470F007D9C44 /* CardView.swift */,
 				57ACE9892BB3B390003553EE /* Assets.xcassets */,
 				57ACE98B2BB3B390003553EE /* Freshzilla.entitlements */,
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				572A99062BB6470F007D9C44 /* CardView.swift in Sources */,
+				5741283B2BB9E22800D29854 /* CardStorage.swift in Sources */,
 				57ACE9882BB3B38F003553EE /* ContentView.swift in Sources */,
 				572A99042BB6468A007D9C44 /* Card.swift in Sources */,
 				57E0F8B62BB91595002E49E4 /* EditCardsView.swift in Sources */,
