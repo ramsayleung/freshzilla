@@ -14,5 +14,5 @@ Use case:
 
 <img src="./img/freshzilla_v1.gif" width="500" height="250">
 
-<img src="./img/freshzilla_v1.gif" width="500" height="250">
+<img src="./img/freshzilla_v2.gif" width="500" height="250">
 
