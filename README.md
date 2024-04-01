@@ -12,7 +12,7 @@ Use case:
 
 ## Screenshot
 
-<img src="./img/freshzilla_v1.gif" width="250" height="500">
+<img src="./img/freshzilla_v1.gif" width="500" height="250">
 
-<img src="./img/freshzilla_v1.gif" width="250" height="500">
+<img src="./img/freshzilla_v1.gif" width="500" height="250">
 
